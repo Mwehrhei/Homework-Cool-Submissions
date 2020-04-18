@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Homework: Cool Submissions</title>
+  
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div id = "app">
+  <h1>Michael's Form </h1>
+  
+  <p>*Name</p>
+  <input v-model="name" placeholder="Please enter your name here"/>
+  <p class = "fix">{{nameValid}}</p>
+  
+  <p>*Age</p>
+  <input v-model="age" type= "number" placeholder = "Please enter your age here"/>
+  <p class = "fix">{{ageValid}}</p>
+  
+  <p>*Email</p>
+  <input v-model="email" type = "email" placeholder = "Please enter your email here"/>
+  <p class = "fix">{{emailValid}}</p>
+  
+  <p>Comments</p>
+  <textarea v-model = "comment" placeholder = "Please enter your comments here" rows="5" cols="50" >
+  </textarea>
+ 
+  <h4 v-bind:class = "{fix:checkSubmission=='Invalid Submission'}">{{checkSubmission}}</h4>
+ 
+  <button v-on:click="">Submit
+  
+  </button>
+  
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
